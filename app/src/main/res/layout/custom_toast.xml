@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/rounded_box"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/toast_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/kana_logo_transparent" />
+
+    <TextView
+        android:id="@+id/toast_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chevin_bold"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:gravity="center"
+    android:layout_gravity="center"
+    android:textColor="@android:color/white"
+    android:textSize="18sp" />
+</LinearLayout>

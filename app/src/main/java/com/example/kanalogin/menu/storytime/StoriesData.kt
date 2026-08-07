@@ -1,0 +1,28 @@
+package com.example.kanalogin.menu.storytime
+
+data class QuestionData(
+    val question: String,
+    val answers: List<String>,
+    val correctAnswer: String
+)
+
+object StoriesData {
+    fun getStories() = listOf(
+        Pair(
+            "たろうくんは あさ ごはんを たべました。それから がっこうに いきました。がっこうで べんきょうしました。おひるに ともだちと あそびました。",
+            QuestionData("たろうくんは どこに いきましたか？", listOf("うち", "がっこう", "スーパー", "えいがかん"), "がっこう")
+        ),
+        Pair(
+            "さくらさんは スーパーで りんごと バナナを かいました。それから うちに かえりました。",
+            QuestionData("さくらさんは どこで くだものを かいましたか？", listOf("えき", "スーパー", "がっこう", "こうえん"), "スーパー")
+        ),
+        Pair(
+            "けんくんは かわで つりを しました。それから ともだちと いっしょに あそびました。",
+            QuestionData("けんくんは どこで つりを しましたか？", listOf("かわ", "うみ", "やま", "がっこう"), "かわ")
+        ),
+        Pair(
+            "みきちゃんは ともだちと こうえんに いきました。そこで おにごっこを しました。",
+            QuestionData("みきちゃんは どこに いきましたか？", listOf("スーパー", "えき", "こうえん", "がっこう"), "こうえん")
+        )
+    )
+}

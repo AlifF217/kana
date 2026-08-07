@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "558092718438",
+    "project_id": "kana-28df4",
+    "storage_bucket": "kana-28df4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558092718438:android:fd6a85fb712695a2efb8a7",
+        "android_client_info": {
+          "package_name": "com.example.kanalogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6I-nrIHIaJeiKjQ0-Xki_WXbUWV4Yw7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
