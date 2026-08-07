@@ -127,7 +127,6 @@ fun MainApp(onLogout: () -> Unit) {
 
 
             composable("feedback") {
-                val context = LocalContext.current
                 FeedbackScreen()
             }
 
@@ -145,7 +144,7 @@ fun MainApp(onLogout: () -> Unit) {
                 )
             }
 
-            composable("letters") { val currentUser = FirebaseAuth.getInstance().currentUser
+            composable("letters") {
                 Letters(navController = navController) }
 
             composable("flashcard") { val currentUser = FirebaseAuth.getInstance().currentUser
@@ -162,7 +161,7 @@ fun MainApp(onLogout: () -> Unit) {
                 StoryTime(navController = navController,currentUser = currentUser) }
             composable("profilePicture") { ProfilePictureScreen(navController = navController) }
 
-            composable("sayit_training") {  val currentUser = FirebaseAuth.getInstance().currentUser
+            composable("sayit_training") {
                 SayitTraining(navController = navController) }// Navigates to the Training screen
             composable("sayit_basic_course") {  val currentUser = FirebaseAuth.getInstance().currentUser
                 Sayit_Course(navController = navController,currentUser = currentUser) }// Navigates to the Training screen
@@ -172,7 +171,6 @@ fun MainApp(onLogout: () -> Unit) {
                 val correctCount = backStackEntry.arguments?.getString("correctCount")?.toInt() ?: 0
                 val wrongCount = backStackEntry.arguments?.getString("wrongCount")?.toInt() ?: 0
                 val totalEXP = backStackEntry.arguments?.getString("totalEXP")?.toInt() ?: 0
-                val leveledUp = backStackEntry.arguments?.getString("leveledUp")?.toBoolean() ?: false
                 val userLevel = backStackEntry.arguments?.getString("userLevel")?.toLong() ?: 1
 
                 ResultsScreen(
