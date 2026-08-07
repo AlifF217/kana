@@ -32,6 +32,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.milliseconds
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -164,7 +165,7 @@ fun StoryTime(navController: NavController, currentUser: FirebaseUser?) {
                                             showMessage = true
 
                                             coroutineScope.launch {
-                                                delay(1500) // Show feedback for 1.5 seconds
+                                                delay(1500.milliseconds) // Show feedback for 1.5 seconds
                                                 showMessage = false
                                                 if (currentStoryIndex == totalStories) {
 

@@ -52,7 +52,7 @@ fun ProgressSharingScreen(
                     Toast.makeText(context, "User not found", Toast.LENGTH_SHORT).show()
                 } else {
                     val userData = result.documents.first()
-                    imageName = userData.getString("userpfp") // Fetch profile picture name
+                    imageName = userData.getString("userprofile") // Fetch profile picture name
                     userLevel = userData.getLong("level")
                     userRank = userData.getString("rank")
                     userStreak = userData.getLong("streak")
@@ -194,7 +194,7 @@ fun shareProgress(
 
     try {
         startActivity(context, Intent.createChooser(sendIntent, "Share via"), null)
-    } catch (e: Exception) {
+    } catch (_: Exception) {
         Toast.makeText(context, "Error sharing progress", Toast.LENGTH_SHORT).show()
     }
 }
