@@ -1,6 +1,7 @@
 [versions]
 agp = "9.3.1"
 coilCompose = "2.7.0"
+compose-compiler = "2.4.10"
 datastorePreferences = "1.2.1"
 firebaseAppcheckPlayintegrity = "19.4.0"
 firebaseAppcheckSafetynet = "16.1.2"
@@ -67,5 +68,6 @@ ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.4.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "compose-compiler" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
