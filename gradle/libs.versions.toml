@@ -1,31 +1,31 @@
 [versions]
-agp = "8.7.3"
-coilCompose = "2.4.0"
-datastorePreferences = "1.1.1"
-firebaseAppcheckPlayintegrity = "16.0.0"
-firebaseAppcheckSafetynet = "16.0.0"
-kotlin = "2.0.0"
-coreKtx = "1.15.0"
+agp = "9.3.1"
+coilCompose = "2.7.0"
+datastorePreferences = "1.2.1"
+firebaseAppcheckPlayintegrity = "19.4.0"
+firebaseAppcheckSafetynet = "16.1.2"
+kotlin = "2.4.10"
+coreKtx = "1.19.0"
 junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.04.01"
-material3 = "1.3.1"
-materialIconsExtended = "1.7.6"
-navigationCompose = "2.8.4"
-googleGmsGoogleServices = "4.4.2"
-firebaseAuth = "23.1.0"
-firebaseCrashlyticsBuildtools = "3.0.2"
-tvMaterial = "1.0.0"
-firebaseStorageKtx = "21.0.1"
-firebaseFirestoreKtx = "25.1.1"
-firebaseFirestore = "25.1.1"
-foundationAndroid = "1.7.2"
-foundationLayoutAndroid = "1.7.2"
-animationAndroid = "1.7.2"
-ui = "1.8.0-alpha06"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
+lifecycleRuntimeKtx = "2.11.0"
+activityCompose = "1.13.0"
+composeBom = "2026.06.01"
+material3 = "1.4.0"
+materialIconsExtended = "1.7.8"
+navigationCompose = "2.9.8"
+googleGmsGoogleServices = "4.5.0"
+firebaseAuth = "24.2.0"
+firebaseCrashlyticsBuildtools = "3.0.7"
+tvMaterial = "1.1.0"
+firebaseStorageKtx = "21.0.2"
+firebaseFirestoreKtx = "25.1.4"
+firebaseFirestore = "26.5.0"
+foundationAndroid = "1.11.4"
+foundationLayoutAndroid = "1.11.4"
+animationAndroid = "1.11.4"
+ui = "1.11.4"
 uiDesktop = "1.7.0"
 
 [libraries]
@@ -65,7 +65,7 @@ ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.1.0" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "2.4.10" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
