@@ -11,7 +11,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:src="@drawable/kana_logo_transparent" />
+        android:src="@drawable/kana_logo_transparent"
+        android:contentDescription="@string/company_logo_description" />
+
 
     <TextView
         android:id="@+id/toast_message"

@@ -5,17 +5,40 @@ import android.content.Context
 import android.media.MediaPlayer
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRow
+import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.TabRowDefaults.tabIndicatorOffset
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -24,12 +47,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.kanalogin.ui.theme.CustomTypography
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.delay
+import kotlin.time.Duration.Companion.milliseconds
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Letters(navController: NavController, currentUser: FirebaseUser?) {
+fun Letters(navController: NavController) {
     var selectedTab by remember { mutableIntStateOf(0) }
     var showExitConfirmation by remember { mutableStateOf(false) }
     val context = LocalContext.current
@@ -141,7 +164,7 @@ fun Letters(navController: NavController, currentUser: FirebaseUser?) {
                     // Handle color reset and state after button click
                     if (isClicked) {
                         LaunchedEffect(character) {
-                            delay(800)  // Wait for 800ms before resetting color
+                            delay(800.milliseconds)  // Wait for 800ms before resetting color
                             buttonColors[character] = Color(0xFFF17175)  // Revert to original color
                             isClicked = false
                         }

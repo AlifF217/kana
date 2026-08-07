@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.kanalogin"
-    compileSdk = 35
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.example.kanalogin"
@@ -73,13 +73,11 @@ dependencies {
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.firebase.firestore.ktx)
-    implementation(libs.androidx.foundation.layout.android)
 
     // Testing libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
 
     // Debugging tools

@@ -128,7 +128,7 @@ fun MainApp(onLogout: () -> Unit) {
 
             composable("feedback") {
                 val context = LocalContext.current
-                FeedbackScreen(navController = navController, context = context)
+                FeedbackScreen()
             }
 
             composable("progressSharing/{userName}/{userEmail}") { backStackEntry ->
@@ -146,7 +146,7 @@ fun MainApp(onLogout: () -> Unit) {
             }
 
             composable("letters") { val currentUser = FirebaseAuth.getInstance().currentUser
-                Letters(navController = navController, currentUser = currentUser) }
+                Letters(navController = navController) }
 
             composable("flashcard") { val currentUser = FirebaseAuth.getInstance().currentUser
                 Flashcard(navController = navController, currentUser = currentUser) }
@@ -163,7 +163,7 @@ fun MainApp(onLogout: () -> Unit) {
             composable("profilePicture") { ProfilePictureScreen(navController = navController) }
 
             composable("sayit_training") {  val currentUser = FirebaseAuth.getInstance().currentUser
-                SayitTraining(navController = navController,currentUser = currentUser) }// Navigates to the Training screen
+                SayitTraining(navController = navController) }// Navigates to the Training screen
             composable("sayit_basic_course") {  val currentUser = FirebaseAuth.getInstance().currentUser
                 Sayit_Course(navController = navController,currentUser = currentUser) }// Navigates to the Training screen
 
@@ -180,7 +180,6 @@ fun MainApp(onLogout: () -> Unit) {
                     correctCount = correctCount,
                     wrongCount = wrongCount,
                     totalEXP = totalEXP,
-                    leveledUp = leveledUp,
                     userLevel = userLevel
                 )
 

@@ -2,10 +2,6 @@ package com.example.kanalogin
 
 import android.R.drawable.ic_menu_camera
 import android.app.Activity
-import android.net.Uri
-import android.os.Build
-import android.widget.Toast
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -35,51 +31,9 @@ import com.example.kanalogin.ui.theme.CustomTypography
 import com.example.kanalogin.ui.theme.KanaLoginTheme
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-
-import java.util.UUID
-
-// Upload profile picture to Firebase Storage
-fun uploadProfilePicture(imageUri: Uri, context: android.content.Context, onUrlRetrieved: (String) -> Unit) {
-    val user = FirebaseAuth.getInstance().currentUser
-    if (user != null) {
-        val storageReference: StorageReference = FirebaseStorage.getInstance().reference
-            .child("profile_pictures")
-            .child("${UUID.randomUUID()}.jpg")
-
-        storageReference.putFile(imageUri)
-            .addOnSuccessListener {
-                storageReference.downloadUrl.addOnSuccessListener { downloadUrl ->
-                    onUrlRetrieved(downloadUrl.toString())
-                }
-            }
-            .addOnFailureListener {
-                Toast.makeText(context, "Failed to upload image", Toast.LENGTH_SHORT).show()
-            }
-    }
-}
-
-// Save profile picture URL to Firestore
-fun saveProfilePictureUrlToFirestore(url: String, context: android.content.Context) {
-    val user = FirebaseAuth.getInstance().currentUser
-    val db = FirebaseFirestore.getInstance()
-    if (user != null) {
-        val userRef = db.collection("users").document(user.uid)
-
-        userRef.update("profilePictureUrl", url)
-            .addOnSuccessListener {
-                Toast.makeText(context, "Profile picture updated", Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener {
-                Toast.makeText(context, "Failed to update profile picture URL", Toast.LENGTH_SHORT).show()
-            }
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -137,11 +91,6 @@ fun MenuScreen(onLogout: () -> Unit, navController: NavController) {
     }
 
     // Set the theme based on themeState (false -> light, true -> dark)
-    val colors = if (themeState) {
-        darkColorScheme() // Define dark theme
-    } else {
-        lightColorScheme() // Define light theme
-    }
 
     KanaLoginTheme(darkTheme = themeState) {
     Scaffold(

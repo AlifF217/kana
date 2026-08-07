@@ -3,7 +3,6 @@
 package com.example.kanalogin.menu.accountsettings
 
 import android.widget.Toast
-import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.navigation.NavController
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
@@ -11,9 +10,6 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import android.content.Context
-
-// This is the standard visual transformation for password fields
-val passwordVisualTransformation = PasswordVisualTransformation()
 
 fun changeUsername(user: FirebaseUser, newUsername: String) {
     // Update Firebase Authentication display name

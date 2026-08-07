@@ -2,6 +2,7 @@
 
 package com.example.kanalogin.menu.userprofile
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -130,6 +131,7 @@ fun updateProfilePicture(drawableName: String, context: Context, currentUser: Fi
 }
 
 // Function to display the custom toast
+@SuppressLint("InflateParams")
 fun showCustomToast(context: Context, message: String) {
     val inflater = LayoutInflater.from(context)
     val layout: View = inflater.inflate(R.layout.custom_toast, null)

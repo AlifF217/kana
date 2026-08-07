@@ -16,7 +16,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -29,7 +28,6 @@ fun ResultsScreen(
     correctCount: Int,
     wrongCount: Int,
     totalEXP: Int,
-    leveledUp: Boolean,
     userLevel: Long
 ) {
     val leveledUpString = navController.currentBackStackEntry?.arguments?.getString("leveledUp")

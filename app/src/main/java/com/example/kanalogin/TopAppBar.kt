@@ -1,9 +1,10 @@
+package com.example.kanalogin
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ExitToApp
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Email
-import androidx.compose.material.icons.outlined.ExitToApp
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material3.*
@@ -12,13 +13,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.unit.IntOffset
 
 @Composable
 fun TopAppBarWithKebabMenu(onLogout: () -> Unit) {
     var expanded by remember { mutableStateOf(false) }
-    val context = LocalContext.current
 
     Box(modifier = Modifier.fillMaxSize().wrapContentSize(Alignment.TopEnd)) {
         // Align the IconButton to the top-right

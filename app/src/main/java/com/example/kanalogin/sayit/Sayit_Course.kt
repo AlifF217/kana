@@ -30,6 +30,7 @@ import com.example.kanalogin.ui.theme.CustomTypography
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.delay
+import kotlin.time.Duration.Companion.milliseconds
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -58,8 +59,6 @@ fun Sayit_Course(navController: NavController, currentUser: FirebaseUser?) {
     var leveledUp by remember { mutableStateOf(false) }
 
     val db = FirebaseFirestore.getInstance()
-
-    val coroutineScope = rememberCoroutineScope()
 
     // For record permission request
     val recordAudioLauncher = rememberLauncherForActivityResult(
@@ -143,7 +142,7 @@ fun Sayit_Course(navController: NavController, currentUser: FirebaseUser?) {
                 tempEXP += 10
                 currentQuestionIndex++
 
-                delay(2000) // Show feedback for 2 seconds
+                delay(2000.milliseconds) // Show feedback for 2 seconds
                 showFeedback = false
                 if (currentQuestionIndex <= totalQuestions) {
                     currentPhrase = randomPhrases.random()
@@ -152,7 +151,7 @@ fun Sayit_Course(navController: NavController, currentUser: FirebaseUser?) {
             } else {
                 feedbackMessage = "Wrong!"
                 showFeedback = true
-                delay(2000) // Show feedback for 2 seconds
+                delay(2000.milliseconds) // Show feedback for 2 seconds
                 showFeedback = false
                 isWrongAnswer = true
                 wrongCount++

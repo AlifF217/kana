@@ -1,6 +1,5 @@
 package com.example.kanalogin.menu
 
-import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -14,11 +13,10 @@ import androidx.compose.ui.unit.sp
 import com.example.kanalogin.ui.theme.CustomTypography
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.auth.FirebaseAuth
-import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FeedbackScreen(navController: NavController, context: Context) {
+fun FeedbackScreen() {
     val subject = remember { mutableStateOf("") }
     val feedbackText = remember { mutableStateOf("") }
     val isFeedbackSent = remember { mutableStateOf(false) } // State for feedback sent status
@@ -150,7 +148,7 @@ fun sendFeedbackToFirestore(
             // Successfully added feedback to Firestore
             onSuccess() // Do not navigate, just show success message
         }
-        .addOnFailureListener { exception ->
+        .addOnFailureListener { _ ->
             // Handle failure case
             onFailure()
         }

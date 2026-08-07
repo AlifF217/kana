@@ -1,9 +1,5 @@
 package com.example.kanalogin.ui.theme
 
-import android.annotation.SuppressLint
-import android.os.Build
-import androidx.annotation.RequiresApi
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
@@ -18,8 +14,6 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.example.kanalogin.menu.userprofile.settings.PreferenceManager
-import com.example.kanalogin.menu.userprofile.settings.Theme
 import com.example.kanalogin.R
 
 // Custom Font for Japanese theme (Chevin as placeholder, replace with Japanese-inspired font)
@@ -66,11 +60,10 @@ private val DarkColors = darkColorScheme(
     onSurface = Color.White
 )
 
-@RequiresApi(Build.VERSION_CODES.S)
 @Composable
 fun KanaLoginTheme(
     darkTheme: Boolean,  // Directly use the darkTheme state here
-    dynamicColor: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     // Get context and apply theme based on the darkTheme flag

@@ -32,6 +32,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
 
 data class Flashcard(val imageRes: Int, val correctAnswer: String, val options: List<String>)
 
@@ -141,7 +142,7 @@ fun Flashcard(navController: NavController, currentUser: FirebaseUser?) {
                         }
                         showFeedback = true
                         coroutineScope.launch {
-                            delay(1500) // Show feedback for 1.5 seconds
+                            delay(1500.milliseconds) // Show feedback for 1.5 seconds
                             showFeedback = false
                             if (currentQuestionIndex == totalQuestions) {
                                 // After the last question, add the temporary EXP to the user

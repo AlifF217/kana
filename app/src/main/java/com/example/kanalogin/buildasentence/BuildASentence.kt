@@ -28,11 +28,11 @@ import com.example.kanalogin.ExitConfirmationDialog
 import com.example.kanalogin.addExperience
 import kotlinx.coroutines.delay
 import kotlin.random.Random
-import com.example.kanalogin.buildasentence.sentencePairs
 import com.example.kanalogin.ui.theme.CustomTypography
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
 
 @OptIn(ExperimentalLayoutApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -220,7 +220,7 @@ fun SentenceGameScreen(navController: NavController, currentUser: FirebaseUser?)
                             userSelection.clear()
 
                             coroutineScope.launch {
-                                delay(1500) // Show feedback for 1.5 seconds
+                                delay(1500.milliseconds) // Show feedback for 1.5 seconds
                                 showFeedback = false
                                 if (currentQuestionIndex == totalQuestions) {
                                     // Add EXP after completing the quiz

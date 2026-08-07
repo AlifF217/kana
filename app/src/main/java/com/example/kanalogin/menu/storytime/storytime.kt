@@ -1,8 +1,5 @@
 package com.example.kanalogin.menu.storytime
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -21,11 +18,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.kanalogin.flashcard.generateRandomCard
 import com.example.kanalogin.ui.theme.CustomTypography
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.milliseconds
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -99,7 +96,7 @@ fun StoryTime(navController: NavController) {
                                                 if (answer == questionData.correctAnswer) "Correct!" else "Wrong!"
                                             showMessage = true
                                             coroutineScope.launch {
-                                                delay(1500) // Show feedback for 1.5 seconds
+                                                delay(1500.milliseconds) // Show feedback for 1.5 seconds
                                                 showMessage = false
                                                 showRandomQuestion()
                                             }
