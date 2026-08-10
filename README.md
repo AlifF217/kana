@@ -1,3 +1,6 @@
+<a name="readme-top"></a>
+
+
 # Kana - Japanese Language Learning Application
 
 ## 🛠️ Technologies Used
@@ -331,10 +334,12 @@ Demo Highlights:
 ✅ Progress tracking and achievements
 
 ## 👥 Contributors
-Name	Role
-Alif Firdaus Azhar 	Lead Developer
-Ridzuan Zainordin Project Manager
-National University of Malaysia (UKM)	Project Sponsor
+
+| Name | Role |
+|-----------|------------|
+| Alif Firdaus Azhar | Lead Developer |
+| Ridzuan Zainordin | Project Manager |
+
 ## 📄 License
 This project is created for educational purposes as part of a university project at the National University of Malaysia.
 
@@ -348,6 +353,6 @@ Open source community for the amazing tools and libraries
 <div align="center">
 Happy Learning! がんばってください！
 
-⬆ Back to Top
+<p align="center">(<a href="#readme-top">back to top</a>)</p>
 
 </div>
