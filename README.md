@@ -196,15 +196,17 @@ Firestore - Stores user data, progress, and feedback
 Storage - Hosts profile pictures and learning resources
 
 ## 📚 What I Learned
-Technical Skills
-Skill	Description
-Jetpack Compose	Building responsive and dynamic UIs with declarative programming
-Firebase Integration	Implementing authentication, real-time database, and cloud storage
-State Management	Using StateFlow for reactive UI updates
-Speech Recognition	Implementing voice-to-text functionality in Android
-Coroutines	Handling asynchronous operations efficiently
-MVVM Architecture	Structuring a clean and maintainable codebase
-Development Practices
+
+| Technical Skills | Skill	Description |
+|-----------|------------|
+| Jetpack Compose | 	Building responsive and dynamic UIs with declarative programming |
+| Firebase Integration| Implementing authentication, real-time database, and cloud storage |
+| State Management| Using StateFlow for reactive UI updates |
+| Speech Recognition| Implementing voice-to-text functionality in Android |
+| Coroutines| Handling asynchronous operations efficiently |
+| MVVM Architecture| Structuring a clean and maintainable codebase |
+	
+## Development Practices
 User-Centered Design - Creating features based on real user needs (UKM students)
 
 Data Persistence - Implementing cloud-based storage for user progress
@@ -213,7 +215,7 @@ Mobile UX Design - Creating intuitive and accessible interfaces
 
 Debugging and Testing - Ensuring app stability and performance
 
-Project Management
+## Project Management
 Requirements Elicitation - Understanding user needs through research
 
 System Design - Creating use case diagrams and system models
@@ -294,15 +296,31 @@ Click the "Run" button in Android Studio
 
 The app will be installed on your device
 
-### Direct APK File Installation
-
-
 6. Create a Test Account
 Launch the app
 
 Register a new account
 
 Start learning Japanese!
+
+### Direct APK File Installation
+
+1. Download the File
+Download the File through this link on your smartphone
+https://drive.google.com/file/d/1mlLs7XzItau8osLHpGRaUvcooHnopT1n/view?usp=sharing
+
+2.Open the File
+Open the file and click install
+
+The app will be installed on your device
+
+3. Create a Test Account
+Launch the app
+
+Register a new account
+
+Start learning Japanese!
+
 
 ### Troubleshooting
 Issue	Solution
@@ -351,7 +369,10 @@ All students who participated in the requirements gathering
 Open source community for the amazing tools and libraries
 
 <div align="center">
-Happy Learning! がんばってください！
+  
+**Happy Learning!**
+  
+**がんばってください！**
 
 <p align="center">(<a href="#readme-top">back to top</a>)</p>
 
